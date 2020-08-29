@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GithubProfileComponent } from './github-profile/github-profile.component';
 import { UserServiceService } from './user-service.service';
+import { ReposComponent } from './repos/repos.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { UserServiceService } from './user-service.service';
     AppComponent,
     NavbarComponent,
     GithubProfileComponent,
+    ReposComponent,
   ],
   imports: [
     HttpClientModule,

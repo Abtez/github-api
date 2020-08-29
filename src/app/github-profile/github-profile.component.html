@@ -19,7 +19,7 @@
       <!-- Title -->
       <h3 *ngIf="userInfo.name" id="name" class="card-title"><strong>{{ userInfo.name }}</strong></h3>
       <!-- Subtitle -->
-      <h5 *ngIf="userInfo.login" class="blue-text pb-2">User Name : <strong>{{ userInfo.login }}</strong></h5>
+      <h5 *ngIf="userInfo.login" class="cyan-text pb-2">User Name : <strong>{{ userInfo.login }}</strong></h5>
       <!-- Text -->
       <h5 *ngIf="userInfo.location" class="blue-text pb-2"> Location : {{ userInfo.location }} </h5>
   
@@ -37,21 +37,21 @@
             <div class="card-body card-body-cascade text-center side-card">
 
                 <!-- Title -->
-                <h4 class="card-title"><strong>Description</strong></h4>
+                <h4 class="card-title"><strong>Profile Info</strong></h4>
                 <!-- Subtitle -->
                 <h6 class="font-weight-bold indigo-text py-2">My Bio</h6>
                 <!-- Text -->
                 <p *ngIf="userInfo.bio" class="card-text">{{ userInfo.bio }}</p>
             <div class="social-icons">
                 <!-- Linkedin -->
-                <a href="{{ userInfo.html_url }} " target="_blank" class="px-2 fa-lg li-ic"><i class="fab fa-github"></i></a>
+                <a href="{{ userInfo.html_url }} " target="_blank" class="px-2 fa-lg li-ic"><i class="fab fa-github fa-2x"></i></a>
                 <!-- Twitter -->
-                <a href="https://twitter.com/{{ userInfo.twitter_username }} " target="_blank" class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
+                <a href="https://twitter.com/{{ userInfo.twitter_username }} " target="_blank" class="px-2 fa-lg tw-ic"><i class="fab fa-twitter fa-2x"></i></a>
                 <!-- Dribbble -->
-                <a href="emailto:{{ userInfo.email }}" class="px-2 fa-lg fb-ic"><i class="fa fa-envelope"></i></a>
+                <a href="emailto:{{ userInfo.email }}" class="px-2 fa-lg fb-ic"><i class="fa fa-envelope fa-2x"></i></a>
             </div>
             <div>
-                <p>
+                <p style="font-size: larger;"> 
                     <span class="badge badge-default">{{ userInfo.followers }} Followers</span>
                     <span class="badge badge-info">Following {{ userInfo.following }}</span>
                     <span class="badge badge-light">{{ userInfo.public_repos }} Public Repos</span>
@@ -63,10 +63,7 @@
     </div>
 
     <div class="col-md-3">
-        <h2>Repositories</h2>
-        <ul class="list-group">
-            <li class="list-group-items"></li>
-        </ul>
+    <app-repos></app-repos>
     </div>
 </div>
 </div>
