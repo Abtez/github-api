@@ -1,6 +1,8 @@
 import { User } from './user';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import 'rxjs/add/operator/map';
 //map opeator returns results as observables from git
 
 
@@ -9,15 +11,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserServiceService {
 
- private userName:User;
-  private api = "68c86fc561ffdb2afcc7af30186e053b7e83a1b3"
+ private userName;
+ private api = environment.apiUrl;
 
   constructor(private http: HttpClient) { 
-    this.userName = new User("abzed");
+    this.userName = "abzed";
   }
 
   getProfileInfo(){
-   return this.http.get("https://api.github.com/users/" + this.userName + "?access_token=" + this.api);
+   return this.http.get<User>("https://api.github.com/users/" + this.userName + "?access_token=" + this.api).map((response: any) => response.json());
   }
 
 }

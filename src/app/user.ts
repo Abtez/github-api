@@ -1,3 +1,3 @@
 export class User {
-    constructor(private userName:any){}
+    constructor(public userInfo:any){}
 }
