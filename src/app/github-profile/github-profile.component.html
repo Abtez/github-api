@@ -1,3 +1,72 @@
-<div >
-    <p> </p>
+<div *ngIf="userInfo">
+    <h2></h2>
+    <div class="row">
+        <div class="col-md-3">
+            <!-- Card Wider -->
+<div class="card card-cascade wider">
+
+    <!-- Card image -->
+    <div class="view view-cascade overlay">
+      <img class="card-img-top" src="{{ userInfo.avatar_url }}" alt="profile photo" height="300">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+  
+    <!-- Card content -->
+    <div class="card-body card-body-cascade text-center pb-0">
+  
+      <!-- Title -->
+      <h3 *ngIf="userInfo.name" id="name" class="card-title"><strong>{{ userInfo.name }}</strong></h3>
+      <!-- Subtitle -->
+      <h5 *ngIf="userInfo.login" class="blue-text pb-2">User Name : <strong>{{ userInfo.login }}</strong></h5>
+      <!-- Text -->
+      <h5 *ngIf="userInfo.location" class="blue-text pb-2"> Location : {{ userInfo.location }} </h5>
+  
+      <!-- Card footer -->
+      <div class="card-footer text-muted text-center mt-4">
+        2 days ago
+      </div>
+  
+    </div>
+  
+  </div>
+  <!-- Card Wider -->
+        </div>
+        <div class="col-md-6">
+            <div class="card-body card-body-cascade text-center side-card">
+
+                <!-- Title -->
+                <h4 class="card-title"><strong>Description</strong></h4>
+                <!-- Subtitle -->
+                <h6 class="font-weight-bold indigo-text py-2">My Bio</h6>
+                <!-- Text -->
+                <p *ngIf="userInfo.bio" class="card-text">{{ userInfo.bio }}</p>
+            <div class="social-icons">
+                <!-- Linkedin -->
+                <a href="{{ userInfo.html_url }} " target="_blank" class="px-2 fa-lg li-ic"><i class="fab fa-github"></i></a>
+                <!-- Twitter -->
+                <a href="https://twitter.com/{{ userInfo.twitter_username }} " target="_blank" class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
+                <!-- Dribbble -->
+                <a href="emailto:{{ userInfo.email }}" class="px-2 fa-lg fb-ic"><i class="fa fa-envelope"></i></a>
+            </div>
+            <div>
+                <p>
+                    <span class="badge badge-default">{{ userInfo.followers }} Followers</span>
+                    <span class="badge badge-info">Following {{ userInfo.following }}</span>
+                    <span class="badge badge-light">{{ userInfo.public_repos }} Public Repos</span>
+                    <span class="badge badge-dark">{{ userInfo.public_gists }} Private Repos</span>
+                </p>
+            </div>
+            <button type="button" class="btn aqua-gradient">View Repositories</button>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <h2>Repositories</h2>
+        <ul class="list-group">
+            <li class="list-group-items"></li>
+        </ul>
+    </div>
+</div>
 </div>

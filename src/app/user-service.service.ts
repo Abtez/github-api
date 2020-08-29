@@ -19,7 +19,7 @@ export class UserServiceService {
   }
 
   getProfileInfo(){
-   return this.http.get<User>("https://api.github.com/users/" + this.userName + "?access_token=" + this.api).map((response: any) => response.json());
+   return this.http.get<User>("https://api.github.com/users/" + this.userName).map((response: any) => response);
   }
 
 }

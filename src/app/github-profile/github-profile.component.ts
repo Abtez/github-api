@@ -14,7 +14,11 @@ export class GithubProfileComponent implements OnInit {
   userInfo:User;
 
   constructor(private userService: UserServiceService) {
-    this.userService = this.userService;
+    this.userService.getProfileInfo().subscribe(userInfo =>{
+      this.userInfo = userInfo
+      console.log(userInfo);
+      
+    })
 
     /*let promise = new Promise((resolve, reject) => {
      this.userService.getProfileInfo().toPromise().then( response =>{
