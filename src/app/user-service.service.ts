@@ -1,3 +1,4 @@
+import { ReposClass } from './repos-class';
 import { User } from './user';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -23,7 +24,7 @@ export class UserServiceService {
   }
 
   getRepos(){
-    return this.http.get<User>("https://api.github.com/users/" + this.userName + "/repos").map((response: any) => response);
+    return this.http.get<ReposClass>("https://api.github.com/users/" + this.userName + "/repos").map((response: any) => response);
   }
 
 }

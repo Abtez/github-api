@@ -13,11 +13,16 @@ import 'rxjs/add/operator/map';
 export class GithubProfileComponent implements OnInit {
 
   userInfo:User;
+  repos:ReposClass;
 
   constructor(private userService: UserServiceService) {
     this.userService.getProfileInfo().subscribe(userInfo =>{
       this.userInfo = userInfo
       console.log(userInfo);
+    });
+    this.userService.getRepos().subscribe(repos =>{
+      this.repos = repos;
+      console.log(repos);
       
     })
 

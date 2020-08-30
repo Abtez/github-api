@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { GithubProfileComponent } from './../github-profile/github-profile.component';
+import { ReposClass } from './../repos-class';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-repos',
@@ -6,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./repos.component.scss']
 })
 export class ReposComponent implements OnInit {
+
+  @Input() repos:ReposClass;
 
   constructor() { }
 
