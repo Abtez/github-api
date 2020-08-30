@@ -14,6 +14,7 @@ export class User {
         public public_repos:any,
         public bio:any,
         public public_gists:any,
+        public updated_at:any,
         )
         {}
 }

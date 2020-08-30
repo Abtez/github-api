@@ -5,8 +5,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TimeCalcPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: any,): Number {
+    let today:Number = Date.now();
+    
+    if (today){
+      return today;
+    }else{
+      return 0;
+    }
   }
 
 }
