@@ -22,4 +22,8 @@ export class UserServiceService {
    return this.http.get<User>("https://api.github.com/users/" + this.userName).map((response: any) => response);
   }
 
+  getRepos(){
+    return this.http.get<User>("https://api.github.com/users/" + this.userName + "/repos").map((response: any) => response);
+  }
+
 }

@@ -1,3 +1,4 @@
+import { ReposClass } from './../repos-class';
 import { HttpClient } from '@angular/common/http';
 import { UserServiceService } from './../user-service.service';
 import { Component, OnInit } from '@angular/core';
