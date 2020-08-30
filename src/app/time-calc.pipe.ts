@@ -6,10 +6,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class TimeCalcPipe implements PipeTransform {
 
   transform(value: any,): Number {
-    let today:Number = Date.now();
+    let lastUpdtate:Number = Date.now();
     
-    if (today){
-      return today;
+    if (lastUpdtate){
+      return lastUpdtate;
     }else{
       return 0;
     }
