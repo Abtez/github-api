@@ -44,7 +44,9 @@ export class GithubProfileComponent implements OnInit {
     })*/
    }
 
-
+  searchUser(){
+    this.userService.updateInfo(this.userName)
+  }
 
   ngOnInit(): void {
   $(document).ready(function(){

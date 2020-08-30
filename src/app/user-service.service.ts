@@ -27,4 +27,8 @@ export class UserServiceService {
     return this.http.get<ReposClass>("https://api.github.com/users/" + this.userName + "/repos").map((response: any) => response);
   }
 
+  updateInfo(userName:User){
+    this.userName = userName;
+  }
+
 }
