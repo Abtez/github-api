@@ -14,18 +14,11 @@ import $ from 'jquery'
 export class GithubProfileComponent implements OnInit {
 
   userInfo:User;
+  userName:User;
   repos:ReposClass;
 
   constructor(private userService: UserServiceService) {
-    this.userService.getProfileInfo().subscribe(userInfo =>{
-      this.userInfo = userInfo
-      console.log(userInfo);
-    });
-    this.userService.getRepos().subscribe(repos =>{
-      this.repos = repos;
-      console.log(repos);
-      
-    })
+  
 
     /*let promise = new Promise((resolve, reject) => {
      this.userService.getProfileInfo().toPromise().then( response =>{
@@ -45,7 +38,16 @@ export class GithubProfileComponent implements OnInit {
    }
 
   searchUser(){
-    this.userService.updateInfo(this.userName)
+    this.userService.updateInfo(this.userName);
+    this.userService.getProfileInfo().subscribe(userInfo =>{
+      this.userInfo = userInfo
+      console.log(userInfo);
+    });
+    this.userService.getRepos().subscribe(repos =>{
+      this.repos = repos;
+      console.log(repos);
+      
+    })
   }
 
   ngOnInit(): void {
