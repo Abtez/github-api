@@ -30,3 +30,12 @@ a{
 .hidden{
     display: none;
 }
+::placeholder{
+    color: cyan;
+    letter-spacing: 2px;
+}
+
+input[type="text"]{
+    color: white;
+    letter-spacing: 2px;
+}
