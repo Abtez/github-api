@@ -17,7 +17,12 @@ export class GithubProfileComponent implements OnInit {
   repos:ReposClass;
 
   constructor(private userService: UserServiceService) {
-    let promise = new Promise((resolve, reject) => {
+  
+   }
+
+  searchUser(){
+    this.userService.updateInfo(this.userName);
+      let promise = new Promise((resolve, reject) => {
       this.userService.getProfileInfo().toPromise().then( response =>{
         this.userInfo = response;
         console.log(response);
@@ -32,27 +37,14 @@ export class GithubProfileComponent implements OnInit {
         resolve()
       },
       error =>{
-       console.log("An error Occured");
+       alert("An error Occured. Please Wait!");
        
         reject(error)
   
       })
   
      })
-   }
-
-  /*searchUser(){
-    this.userService.updateInfo(this.userName);
-    this.userService.getProfileInfo().subscribe(userInfo =>{
-      this.userInfo = userInfo
-      console.log(userInfo);
-    });
-    this.userService.getRepos().subscribe(repos =>{
-      this.repos = repos;
-      console.log(repos);
-      
-    })
-  }*/
+  }
 
   ngOnInit(){}
 
