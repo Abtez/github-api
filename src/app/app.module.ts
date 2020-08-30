@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GithubProfileComponent } from './github-profile/github-profile.component';
 import { UserServiceService } from './user-service.service';
-import { ReposComponent } from './repos/repos.component';
+import { TimeCalcPipe } from './time-calc.pipe';
 
 
 @NgModule({
@@ -17,7 +17,7 @@ import { ReposComponent } from './repos/repos.component';
     AppComponent,
     NavbarComponent,
     GithubProfileComponent,
-    ReposComponent,
+    TimeCalcPipe,
   ],
   imports: [
     FormsModule,
