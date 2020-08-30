@@ -4,6 +4,7 @@ import { UserServiceService } from './../user-service.service';
 import { Component, OnInit } from '@angular/core';
 import  { User } from '../user' 
 import 'rxjs/add/operator/map';
+import $ from 'jquery'
 
 @Component({
   selector: 'app-github-profile',
@@ -46,6 +47,11 @@ export class GithubProfileComponent implements OnInit {
 
 
   ngOnInit(): void {
+  $(document).ready(function(){
+    $("#view-repo").click(function(){
+      $(".hidden").slideToggle();
+    })
+  })
   }
 
 }
