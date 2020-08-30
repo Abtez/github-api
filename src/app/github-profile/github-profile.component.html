@@ -3,12 +3,12 @@
   <form>
     <div class="input-group md-form form-sm form-1 pl-0">
     <div class="input-group-prepend">
-      <span id="basic-text1"><button class="btn btn-cyan btn-sm" type="submit">
+      <span id="basic-text1"><button  (click)="searchUser()" class="btn btn-cyan btn-sm" type="submit">
         <i class="fas fa-search"
           aria-hidden="true"></i>
       </button></span>
     </div>
-    <input class="form-control my-0 py-1" type="text" placeholder="Search git user with username" aria-label="Search" [(ngModel)]="userName" name="username" (keyup)="searchUser()">
+    <input class="form-control my-0 py-1" type="text" placeholder="Search git user with username" aria-label="Search" [(ngModel)]="userName" name="username">
   </div>
 </form>
   

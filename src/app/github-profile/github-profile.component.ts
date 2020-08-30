@@ -50,12 +50,13 @@ export class GithubProfileComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
-  $(document).ready(function(){
+  ngOnInit(){
+    $(document).ready(function(){
     $("#view-repo").click(function(){
-      $(".hidden").slideToggle();
-    })
-  })
+      alert("yes");
+      $(".hidden").toggle();
+    });
+  });
   }
 
 }

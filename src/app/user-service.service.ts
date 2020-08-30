@@ -16,6 +16,7 @@ export class UserServiceService {
  private api = environment.apiUrl;
 
   constructor(private http: HttpClient) { 
+    this.userName = "abzed";
   }
 
   getProfileInfo(){
