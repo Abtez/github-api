@@ -22,6 +22,11 @@ export class GithubProfileComponent implements OnInit {
         this.userInfo = response;
         console.log(response);
         
+        this.userService.getRepos().toPromise().then( data => {
+          this.repos = data;
+          console.log(data);
+          
+        })
         
         
         resolve()
@@ -35,15 +40,6 @@ export class GithubProfileComponent implements OnInit {
   
      })
    }
-
-   searchUser(){
-  
-  }
-
-
-
-
-
 
   /*searchUser(){
     this.userService.updateInfo(this.userName);
