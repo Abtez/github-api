@@ -4,7 +4,6 @@ import { UserServiceService } from './../user-service.service';
 import { Component, OnInit } from '@angular/core';
 import  { User } from '../user' 
 import 'rxjs/add/operator/map';
-import $ from 'jquery'
 
 @Component({
   selector: 'app-github-profile',
@@ -18,26 +17,35 @@ export class GithubProfileComponent implements OnInit {
   repos:ReposClass;
 
   constructor(private userService: UserServiceService) {
+    let promise = new Promise((resolve, reject) => {
+      this.userService.getProfileInfo().toPromise().then( response =>{
+        this.userInfo = response;
+        console.log(response);
+        
+        
+        
+        resolve()
+      },
+      error =>{
+       console.log("An error Occured");
+       
+        reject(error)
   
-
-    /*let promise = new Promise((resolve, reject) => {
-     this.userService.getProfileInfo().toPromise().then( response =>{
-       this.userInfo = response;
-       
-       
-       resolve()
-     },
-     error =>{
-      console.log("An error Occured");
-      
-       reject(error)
-
+      })
+  
      })
-
-    })*/
    }
 
-  searchUser(){
+   searchUser(){
+  
+  }
+
+
+
+
+
+
+  /*searchUser(){
     this.userService.updateInfo(this.userName);
     this.userService.getProfileInfo().subscribe(userInfo =>{
       this.userInfo = userInfo
@@ -48,15 +56,8 @@ export class GithubProfileComponent implements OnInit {
       console.log(repos);
       
     })
-  }
+  }*/
 
-  ngOnInit(){
-    $(document).ready(function(){
-    $("#view-repo").click(function(){
-      alert("yes");
-      $(".hidden").toggle();
-    });
-  });
-  }
+  ngOnInit(){}
 
 }
