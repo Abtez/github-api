@@ -12,6 +12,7 @@ import { GithubProfileComponent } from './github-profile/github-profile.componen
 import { UserServiceService } from './user-service.service';
 import { TimeCalcPipe } from './time-calc.pipe';
 import { AboutComponent } from './about/about.component';
+import { AppHighlightDirective } from './app-highlight.directive';
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
     GithubProfileComponent,
     TimeCalcPipe,
     AboutComponent,
+    AppHighlightDirective,
   ],
   imports: [
   [RouterModule.forRoot(routes)],
