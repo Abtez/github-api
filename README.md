@@ -12,7 +12,7 @@ This is a web aplication where users may enter a GitHub username into a form, su
 
 ## Deployed Live Link
 
-Click on this [link]() to access the  web application.live
+Click on this [link](https://abzed.github.io/github-api/) to access the  web application.live
 
 *****
 
@@ -34,7 +34,7 @@ Click on this [link]() to access the  web application.live
 
 * Right click on folder and navigate to "open with another application" and select your code editor and run the codes on your machine.
 
-* Or you can access the web application directly using this live [link.]()​
+* Or you can access the web application directly using this live [link.](https://abzed.github.io/github-api/)​
 
 *****
 
