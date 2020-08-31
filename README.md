@@ -6,7 +6,7 @@
 
 ## Project Description
 
-This is a web aplication where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. 
+This is a web aplication where users may enter a GitHub username into a form, submit it, and see profile information and descriptions of that person and their public repositories. 
 
 *****
 

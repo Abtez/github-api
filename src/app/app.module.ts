@@ -13,6 +13,7 @@ import { UserServiceService } from './user-service.service';
 import { TimeCalcPipe } from './time-calc.pipe';
 import { AboutComponent } from './about/about.component';
 import { AppHighlightDirective } from './app-highlight.directive';
+import { FooterComponent } from './footer/footer.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
     TimeCalcPipe,
     AboutComponent,
     AppHighlightDirective,
+    FooterComponent,
   ],
   imports: [
   [RouterModule.forRoot(routes)],
