@@ -16,11 +16,6 @@ import { AppHighlightDirective } from './app-highlight.directive';
 import { FooterComponent } from './footer/footer.component';
 
 
-const routes: Routes = [
-  {path: 'github-profile', component:GithubProfileComponent},
-  {path: 'about', component:AboutComponent},
-];
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +27,6 @@ const routes: Routes = [
     FooterComponent,
   ],
   imports: [
-  [RouterModule.forRoot(routes)],
     FormsModule,
     HttpClientModule,
     BrowserModule,
