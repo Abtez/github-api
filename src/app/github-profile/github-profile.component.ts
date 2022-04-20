@@ -34,10 +34,10 @@ export class GithubProfileComponent implements OnInit {
         })
         
         
-        resolve()
+        // resolve()
       },
       error =>{
-       alert("An error Occured. Please Wait!");
+       alert("An error Occured. Please recheck the username!");
        
         reject(error)
   
